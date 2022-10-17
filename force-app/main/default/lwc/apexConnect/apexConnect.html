@@ -1,0 +1,18 @@
+<template>
+<!-- <template for:each={wiredResult} for:item="acc">
+<p key={acc.Id}>
+    {acc.Name} -- {acc.Phone} -- {acc.Industry} <br/>
+</p>
+</template> -->
+<div class="slds-p-around_large">
+<lightning-input placeholder="Enter Account Name" onkeyup={handleInputText}></lightning-input>
+</div>
+<template if:true={isShow}>
+<!-- sldsValidatorIgnoreNextLine -->
+<lightning-datatable 
+ key-field="id" 
+ data={wiredResult} 
+ columns={columns}>
+</lightning-datatable>
+</template>
+</template>

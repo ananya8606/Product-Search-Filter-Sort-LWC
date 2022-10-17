@@ -1,0 +1,32 @@
+<template>
+	<lightning-card variant="Narrow" title="Filter Products" icon-name="standard:filter">
+		<lightning-layout multiple-rows>
+
+			<lightning-layout-item size="12" padding="around-small" if:true={familyPicklistValues.data}>
+				<lightning-checkbox-group name="families" label="Category" options={familyPicklistValues.data.values}
+					value={families} onchange={handleChange}>
+				</lightning-checkbox-group>
+			</lightning-layout-item>
+
+			<lightning-layout-item size="12" padding="around-small">
+				<lightning-slider name="minPrice" label="Min Price" value={minPrice} max="1000000" onchange={handleChange}>
+				</lightning-slider>
+				<lightning-slider name="maxPrice" label="Max Price" value={maxPrice} max="1000000" onchange={handleChange}>
+				</lightning-slider>
+			</lightning-layout-item>
+
+			<lightning-layout-item size="12" padding="around-small">
+				<lightning-input type="text" variant="standard" name="brand" label="Brand" placeholder="Enter Brand"
+					onchange={handleChange}>
+				</lightning-input>
+			</lightning-layout-item>
+
+			<lightning-layout-item size="12" padding="around-small">
+				<lightning-input type="text" variant="standard" name="sku" label="Quantity" placeholder="Enter quantity"
+					onchange={handleChange}>
+				</lightning-input>
+			</lightning-layout-item>
+         
+		</lightning-layout>
+	</lightning-card>
+</template>

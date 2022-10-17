@@ -1,0 +1,10 @@
+<template>
+    <lightning-card  title="LWC Component" icon-name="custom:custom37">
+     <h1 class="slds-var-p-left_large"> {greeting},Welcome to LWC </h1>
+     <lightning-button label="Change Greeting" variant="success" slot="actions" onclick={handleButtonClick}></lightning-button>
+    <div class="slds-var-p-around_large">
+    <lightning-input placeholder="Enter your text" onkeyup={handleInputEvent}></lightning-input>
+    <h2>Typed text :- {textValue}</h2>
+    </div>
+</lightning-card>
+</template>
